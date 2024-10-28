@@ -1,0 +1,11 @@
+nav ul {
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 15px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+}

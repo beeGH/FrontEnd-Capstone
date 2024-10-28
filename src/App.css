@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display:grid;
+  grid-template-areas: "hd hd nv nv nv nv"
+                       "mn mn mn mn mn mn"
+                       "ft ft ft ft ft ft";
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 146px 612px 470px;
+}
+
+.logo {
+  grid-area: hd;
+  justify-items: center;
+}
+
+.nav-bar {
+  grid-area: nv;
+}
+
+.hero {
+  grid-area: mn;
+}
+
+.foot-bar {
+  grid-area: ft;  
+}
+
+
+
+

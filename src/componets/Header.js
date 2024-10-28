@@ -1,10 +1,12 @@
+import logo from '../images/logo1.png'
+
 function  Header() {
     return (
       <header>
-        <img src="../images/logo1.png"
+        <img src={logo}
              alt="Little Lemon"
-             width="247"
-             height="88"/>
+             width="202"
+             height="76"/>
       </header>
     )
     }

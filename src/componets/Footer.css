@@ -1,0 +1,31 @@
+.footContainer {
+    display: grid;
+    grid-template-columns: 1fr repeat(3 1fr);
+    grid-template-areas: "im dr ct sm"                         
+}
+
+.footImage {
+    grid-area: im;
+}
+
+.doormat {
+    grid-area: dr;
+}
+
+.contact {
+    grid-area: ct;
+}
+
+.socialMediaLinks {
+    grid-area: sm;
+}
+
+ul li a{
+    text-decoration: none;
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}

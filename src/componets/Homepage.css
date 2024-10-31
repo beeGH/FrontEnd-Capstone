@@ -1,0 +1,15 @@
+.container {
+    display:grid;
+    grid-template-areas: "mn mn mn mn mn mn"
+                         "ft ft ft ft ft ft";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 612px 470px;
+  }  
+  
+  .hero {
+    grid-area: mn;
+  }
+  
+  .foot-bar {
+    grid-area: ft;  
+  }

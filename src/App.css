@@ -37,13 +37,10 @@
   }
 }
 
-.container {
+/*.container {
   display:grid;
-  grid-template-areas: "hd hd nv nv nv nv"
-                       "mn mn mn mn mn mn"
-                       "ft ft ft ft ft ft";
+  grid-template-areas: "hd hd nv nv nv nv";                       
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 146px 612px 470px;
 }
 
 .logo {
@@ -61,7 +58,7 @@
 
 .foot-bar {
   grid-area: ft;  
-}
+}*/
 
 
 

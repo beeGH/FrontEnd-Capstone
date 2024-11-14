@@ -1,0 +1,45 @@
+.container2 {
+    display: grid;
+    background-color: #494949;
+    grid-template-areas: "nm nm im"
+                         "cy cy im"
+                         "ds . im"
+                         "bt . im";
+    grid-template-columns: 276px 350px 1fr;
+    grid-template-rows: 90px 60px 150px 80px;
+}
+
+.name {
+    grid-area: nm;
+    color: #f4ce14;
+    font-size: 64px;
+    padding: 10px;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.city {
+    grid-area: cy;
+    color: #f4ce14;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.desc {
+    grid-area: ds;
+    color: white;
+    padding: 10px;
+    font-family: 'Karla', sans-serif;
+}
+
+.btnReserve {
+    grid-area:bt;    
+    padding: 10px;
+}
+
+
+.image {
+    grid-area: im;
+    padding-top: 20px;
+}
+

@@ -1,11 +1,12 @@
 import './App.css';
 import Nav from './componets/Nav';
-import Header from './componets/Header';
+import Footer from './componets/Footer';
 
 function App() {
   return (
     <div>
-      <Nav />      
+      <Nav />
+      <Footer />      
     </div>
   );
 }

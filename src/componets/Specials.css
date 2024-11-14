@@ -1,0 +1,62 @@
+.sp_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.sp_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.sp_head button {
+    margin-left: 490px;
+}
+
+.sp_item {
+    display:grid;
+    grid-template-areas: "im im"
+                         "nm pr"
+                         "ds .";
+    grid-template-columns: 210px 100px;
+    grid-template-rows: 200px 30px 200px;
+    font-family: 'Karla', sans-serif;
+    background-color: #edffee;
+    margin: 10px;
+  }  
+  
+.sp_name {
+    grid-area: nm;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Markazi Text', sans-serif;
+    margin-top: 1px;
+    margin-left: 5px;
+  }
+
+.sp_desc {
+    grid-area: ds;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    margin-top: 10px;
+    margin-left: 5px;
+
+  }
+
+.sp_price {
+    grid-area: pr;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    margin-top: 5px;
+    color: #ee9972
+  }
+
+  .sp_img {
+    grid-area: im;
+    justify-self: center;
+  }
+

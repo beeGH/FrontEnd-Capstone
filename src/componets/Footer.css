@@ -1,7 +1,9 @@
 .footContainer {
     display: grid;
     grid-template-columns: 1fr repeat(3 1fr);
-    grid-template-areas: "im dr ct sm"                         
+    grid-template-areas: "im dr ct sm";
+    position: absolute;
+    padding-top: 100px;
 }
 
 .footImage {
@@ -26,8 +28,3 @@ ul li a{
     font-family: 'Karla', sans-serif;
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Karla', sans-serif;
-}

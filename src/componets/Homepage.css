@@ -1,6 +1,7 @@
-.container {
+.hero-container {
     display:grid;
     grid-template-areas: "mn mn mn mn mn mn"
+                         "sp sp sp sp sp sp"
                          "ft ft ft ft ft ft";
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 612px 470px;
@@ -9,7 +10,11 @@
   .hero {
     grid-area: mn;
   }
+
+  .specials {
+    grid-area: sp;
+  }
   
   .foot-bar {
-    grid-area: ft;  
+    grid-area: ft;
   }

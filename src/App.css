@@ -1,4 +1,32 @@
-.App {
+button {
+  padding: 12px;
+  width: 240px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f4ce14;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Karla', sans-serif;
+}
+
+/*.App {
   text-align: center;
 }
 
@@ -35,31 +63,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-/*.container {
-  display:grid;
-  grid-template-areas: "hd hd nv nv nv nv";                       
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.logo {
-  grid-area: hd;
-  justify-items: center;
-}
-
-.nav-bar {
-  grid-area: nv;
-}
-
-.hero {
-  grid-area: mn;
-}
-
-.foot-bar {
-  grid-area: ft;  
 }*/
-
-
-
-

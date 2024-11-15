@@ -41,6 +41,7 @@ fieldset {
     bottom: -6px;
     color: red;
     font-size: 12px;
+    width: 500px;
   }
   
   .Row {
@@ -48,4 +49,18 @@ fieldset {
     flex-direction: row;
   }
   
+  .RadioField {    
+    position: relative;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RadioBtn {
+    width: 25px;
+    height: 25px;
+  }
   
+  .RadioTitle {
+    font-size: 20px;
+  }

@@ -26,6 +26,11 @@ h1 {
   font-family: 'Karla', sans-serif;
 }
 
+h4 {
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+}
+
 /*.App {
   text-align: center;
 }

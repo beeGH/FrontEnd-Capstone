@@ -9,7 +9,7 @@ function Footer() {
         width="200"
         height="200"
       /></div>
-      <div className="doormat"><h1>Doormat Navigation</h1>
+      <div className="doormat"><h3>Doormat Navigation</h3>
         <ul type="none">
           <li><a href="/">Home</a></li>
           <li><a href="/">About</a></li>
@@ -19,14 +19,14 @@ function Footer() {
           <li><a href="/">Login</a></li>
         </ul>
       </div>
-      <div className="contact"><h1>Contact</h1>
+      <div className="contact"><h3>Contact</h3>
         <ul type="none">
           <li><a href="/">Address</a></li>
           <li><a href="/">Phone Number</a></li>
           <li><a href="/">Email</a></li>
         </ul>
       </div>
-      <div className="socialMediaLinks"><h1>Social Media Links</h1>
+      <div className="socialMediaLinks"><h3>Social Media Links</h3>
         <ul type ="none">
           <li><a href="/">Facebook</a></li>
           <li><a href="/">Instagram</a></li>

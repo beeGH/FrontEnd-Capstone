@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import "./CustomerInfo.css"
+import "./FormStyle.css"
 
 const GuestsErrorMessage = () => {
   return (
@@ -17,12 +17,13 @@ function BookingForm(props) {
     value: "2",
     isTouched: false,
   });
-  const [seatOption, setSeatOption] = useState("Indoor")
+  const [seatOption, setSeatOption] = useState("Indoor");
   const [resOccasion, setResOccasion] = useState("");
+  const [resTimes, setResTimes] = useState("");
 
   const getIsFormValid = () => {
     return (
-      resDate &&     
+      resDate &&
       resGuests.value > 1
     )
   }
@@ -41,20 +42,20 @@ function BookingForm(props) {
 
   const handleDateChange = (e) => {
     setResDate(e);
-    props.onTimeChange(e);
+    props.dispatch(e);
   }
 
   return (
     <div>
-      <h1>Reservation Page</h1>
-      <h2>Step 1 of 3</h2>
+      <h1>Table Reservation</h1>
+      {/* <h2>Step 1 of 3</h2> */}
       <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: 200, gap: 20 }}>
         <div className="Field">
           <label htmlFor="res-date">Choose date</label>
           <input type="date"
             id="res-date"
             value={resDate}
-            onChange={(e) => {handleDateChange(e.target.value)}}
+            onChange={(e) => { handleDateChange(e.target.value) }}
             required
           />
         </div>
@@ -62,7 +63,7 @@ function BookingForm(props) {
           <label htmlFor="res-time">Choose time</label>
           <select id="res-time"
             title='test'
-            onChange={() => props.onTimeChange}
+            onChange={(e) => setResTimes(e.target.value)}
             required
           > {props.availableTimes.availableTimes.map((item) =>
             <option key={item}>{item}</option>)}
@@ -88,30 +89,32 @@ function BookingForm(props) {
         </div>
         <div className="RadioField">
           <label className='RadioTitle'>Seating Options</label>
-          <label htmlFor="indoor">Indoor</label>
-          <input type="radio"
-            className='RadioBtn'
-            name="seatOption"
-            value="Indoor"
-            id="indoor"
-            checked={seatOption === "Indoor"}
-            onChange={(e) => {
-              setSeatOption(e.target.value)
-            }}
-            required
-          />
-          <label htmlFor="Outdoor">Outdoor</label>
-          <input type="radio"
-            className='RadioBtn'
-            name="seatOption"
-            value="Outdoor"
-            id="Outdoor"
-            checked={seatOption === "Outdoor"}
-            onChange={(e) => {
-              setSeatOption(e.target.value)
-            }}
-            required
-          />
+          <div className='RadioItems'>
+            <label htmlFor="indoor" className='RadioLable'>Indoor</label>
+            <input type="radio"
+              className='RadioBtn'
+              name="seatOption"
+              value="Indoor"
+              id="indoor"
+              checked={seatOption === "Indoor"}
+              onChange={(e) => {
+                setSeatOption(e.target.value)
+              }}
+              required
+            />
+            <label htmlFor="Outdoor" className='RadioLable'>Outdoor</label>
+            <input type="radio"
+              className='RadioBtn'
+              name="seatOption"
+              value="Outdoor"
+              id="Outdoor"
+              checked={seatOption === "Outdoor"}
+              onChange={(e) => {
+                setSeatOption(e.target.value)
+              }}
+              required
+            />
+          </div>
         </div>
         <div className="Field">
           <label htmlFor="occasion">Occasion</label>
@@ -128,12 +131,12 @@ function BookingForm(props) {
         </div>
         <button type='submit' disabled={!getIsFormValid()} aria-label="On Click">Submit</button>
       </form>
-      <div className="btnReserve"><button
+      {/* <div className="btnReserve"><button
         onClick={() => {
           navigate("/customer_info")
         }}
       >Customer Information</button>
-      </div>
+      </div> */}
     </div>
   );
 }

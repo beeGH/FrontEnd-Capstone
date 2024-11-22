@@ -2,9 +2,10 @@
     display:grid;
     grid-template-areas: "mn mn mn mn mn mn"
                          "sp sp sp sp sp sp"
-                         "ft ft ft ft ft ft";
+                         "rv rv rv rv rv rv"
+                         "ab ab ab ab ab ab";
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 612px 470px;
+    grid-template-rows: 612px 800px 500px;
   }  
   
   .hero {
@@ -14,7 +15,11 @@
   .specials {
     grid-area: sp;
   }
-  
-  .foot-bar {
-    grid-area: ft;
+
+  .about {
+    grid-area: ab;
+  }
+
+  .reviews {
+    grid-area: rv
   }

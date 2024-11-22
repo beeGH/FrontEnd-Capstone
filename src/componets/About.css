@@ -1,0 +1,65 @@
+.about_container {
+    display: grid;
+    background-color: white;
+    grid-template-areas: "nm im1 im2"
+                         "cy im1 im2"
+                         "ds im1 im2";
+    grid-template-columns: 550px 350px 350px;
+    grid-template-rows: 80px 60px 150px;
+    padding-bottom: 100px;
+}
+
+.about_name {
+    grid-area: nm;
+    color: black;
+    font-size: 64px;
+    padding: 10px;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.about_city {
+    grid-area: cy;
+    color: black;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.about_desc {
+    grid-area: ds;
+    font-family: 'Karla', sans-serif;
+    padding: 10px;
+    width: 400px;
+}
+
+.about_image1 {
+    grid-area: im1;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    padding-top: 150px;
+    position: relative;
+}
+
+.about_image2 {
+    grid-area: im2;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    padding-top: 150px;
+    margin-left: -180px;
+    margin-top: -50px;
+}
+
+.about_img_format1 {
+    margin-left: -70px;
+    width: 300px;
+    height: 250px;
+}
+
+.about_img_format2 {
+    margin-left: -70px;
+    margin-top: -50px;
+    width: 300px;
+    height: 250px;
+}

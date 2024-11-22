@@ -1,3 +1,7 @@
+.sp_container {
+  height: 500px;
+  padding-bottom: 1000px;
+}
 .sp_list {
     display: flex;
     flex-direction: row;
@@ -13,16 +17,17 @@
 }
 
 .sp_head button {
-    margin-left: 490px;
+    margin-left: 280px;
 }
 
 .sp_item {
     display:grid;
     grid-template-areas: "im im"
                          "nm pr"
-                         "ds .";
+                         "ds ."
+                         "oo ooi";
     grid-template-columns: 210px 100px;
-    grid-template-rows: 200px 30px 200px;
+    grid-template-rows: 200px 30px 200px 30px;
     font-family: 'Karla', sans-serif;
     background-color: #edffee;
     margin: 10px;
@@ -43,7 +48,6 @@
     font-family: 'Karla', sans-serif;
     margin-top: 10px;
     margin-left: 5px;
-
   }
 
 .sp_price {
@@ -58,5 +62,21 @@
   .sp_img {
     grid-area: im;
     justify-self: center;
+  }
+
+  .sp_order_online {
+    grid-area: oo;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    margin-top: 5px;
+    color: black;
+    padding-left: 30px;
+  }
+
+  .sp_oo_img {
+    grid-area: ooi;
+    justify-self: right;
+    padding-right: 30px;
   }
 

@@ -1,5 +1,5 @@
 import "./Nav.css"
-import { Routes, Route, Link, useNavigate} from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import Homepage from "./Homepage";
 import logo from '../images/logo1.png'
@@ -10,7 +10,7 @@ import { useEffect, useReducer } from "react";
 import { useState } from "react";
 
 const seededRandom = function (seed) {
-    var m = 2**35 - 31;
+    var m = 2 ** 35 - 31;
     var a = 185852;
     var s = seed % m;
     return function () {
@@ -18,41 +18,41 @@ const seededRandom = function (seed) {
     };
 }
 
-const fetchAPI = function(date) {
+const fetchAPI = function (date) {
     let result = [];
     let random = seededRandom(date.getDate());
 
-    for(let i = 17; i <= 23; i++) {
-        if(random() < 0.5) {
+    for (let i = 17; i <= 23; i++) {
+        if (random() < 0.5) {
             result.push(i + ':00');
         }
-        if(random() < 0.5) {
+        if (random() < 0.5) {
             result.push(i + ':30');
         }
     }
     return result;
 };
-const submitAPI = function(formData) {
+const submitAPI = function (formData) {
     return true;
 };
 
 function Nav() {
-    
-    const initializeTimes = {availableTimes: fetchAPI(new Date())};
+
+    const initializeTimes = { availableTimes: fetchAPI(new Date()) };
     const [state, dispatch] = useReducer(updateTimes, initializeTimes);
-
     function updateTimes(state, date) {
-        return {availableTimes: fetchAPI(new Date(date))}
+        return {availableTimes: fetchAPI(new Date(date))};
     }
 
-const navigate = useNavigate();
-function submitForm (formData) {
-    if (submitAPI(formData)){
-        navigate("/confirmed")
-    }
-}    
+    const navigate = useNavigate();
 
-    return (        
+    function submitForm(formData) {
+        if (submitAPI(formData)) {
+            navigate("/confirmed")
+        }
+    }
+
+    return (
         <div className="nav-bar">
             <nav>
                 <img src={logo}
@@ -72,9 +72,9 @@ function submitForm (formData) {
                 <Route path="/" element={<Homepage />}></Route>
                 <Route path="/about" element={<Footer />}></Route>
                 <Route path="/booking-form" element={<BookingForm
-                    availableTimes = {state}
-                    onTimeChange = {dispatch}   
-                    submitForm = {submitForm}                 
+                    availableTimes={state}
+                    dispatch={dispatch}
+                    submitForm={submitForm}
                 />}>
                 </Route>
                 <Route path="/customer_info" element={<CustomerInfo />}></Route>

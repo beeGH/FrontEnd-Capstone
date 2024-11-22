@@ -1,9 +1,10 @@
-.footContainer {
-    display: grid;
-    grid-template-columns: 1fr repeat(3 1fr);
-    grid-template-areas: "im dr ct sm";
-    position: absolute;
-    padding-top: 100px;
+.footContainer {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: left;
+    padding: 2em;
+    width: 1000px;
 }
 
 .footImage {

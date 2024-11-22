@@ -1,0 +1,45 @@
+.rv_container {    
+    padding-left: 20px;
+}
+  
+.rv_list {    
+    display: flex;
+    flex-direction: row; 
+}
+
+.rv_item {
+    display: grid;    
+    grid-template-areas: 
+    "rt rt"
+    "im nm"
+    "ds ds";
+    grid-template-rows: 50px 50px 50px;      
+    grid-template-columns: 50px 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+}   
+    
+.rv_rating {    
+    grid-area: rt; 
+}
+
+  .rv_name {    
+    grid-area: nm;   
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Karla', sans-serif;
+    padding-left: 10px;
+}
+  
+.rv_img {
+    grid-area: im;
+    justify-self: left;
+    width: 50px;
+    height: 50px;    
+}
+
+.rv_desc {
+    grid-area: ds;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}

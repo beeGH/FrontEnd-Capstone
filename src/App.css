@@ -21,9 +21,15 @@ button[disabled] {
 }
 
 h1 {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Markazi Text', sans-serif;
+  font-weight: bold;  
+  font-size: 64px;  
+}
+
+h3 {
   font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 24px
 }
 
 h4 {
